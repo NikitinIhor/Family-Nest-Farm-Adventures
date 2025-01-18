@@ -85,6 +85,9 @@
 .egg.active {
   fill: white;
 }
+.chicken-body {
+  display: none;
+}
 @media (min-width: 1200px) {
   .advantages-container {
     max-width: 1200px;
@@ -125,6 +128,7 @@
   .slider-container {
     width: 100%;
     position: static;
+    overflow: visible;
   }
   .advantages-list {
     display: flex;
@@ -132,8 +136,15 @@
     justify-content: center;
     align-items: center;
     gap: calc(24 / 16 * 1rem);
+    overflow-x: visible;
+    scroll-snap-type: none;
   }
   .advantages-eggs {
     display: none;
+  }
+  .chicken-body {
+    display: flex;
+    justify-self: flex-end;
+    margin-right: calc(50 / 16 * 1rem);
   }
 }

@@ -29,5 +29,13 @@ export const advantages = () => {
     });
   });
 
+  document.querySelector('.advantages-list').addEventListener(
+    'wheel',
+    e => {
+      e.stopPropagation();
+    },
+    { passive: true }
+  );
+
   updateActiveEgg();
 };
