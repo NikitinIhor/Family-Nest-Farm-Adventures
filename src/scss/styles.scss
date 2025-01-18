@@ -1,4 +1,14 @@
-@import './header.scss';
+@import url(../assets/styles/sections/header.css);
+@import url(../assets/styles/sections/hero.css);
+@import url(../assets/styles/sections/about.css);
+@import url(../assets/styles/sections/advantages.css);
+@import url(../assets/styles/sections/gallery.css);
+@import url(../assets/styles/sections/start.css);
+@import url(../assets/styles/sections/footer.css);
+
+@import url(../assets/styles/pages/pages-header.css);
+@import url(../assets/styles/pages/privacy.css);
+@import url(../assets/styles/pages/terms.css);
 
 @font-face {
   font-family: 'Acme';
@@ -18,7 +28,6 @@
   font-weight: 700;
   font-style: normal;
 }
-
 :root {
   font-size: 16px;
   line-height: 1.5;
@@ -32,15 +41,4 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-body {
-  font-family: 'Acme', sans-serif;
-  font-size: 1.5rem;
-}
-h1,
-h2,
-h3,
-.heading {
-  font-family: 'Acme', sans-serif;
-  font-weight: 400;
 }

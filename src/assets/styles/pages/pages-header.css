@@ -1,0 +1,27 @@
+.pages-header {
+  height: calc(76 / 16 * 1rem);
+  background-color: rgba(252, 248, 234, 0.4);
+}
+.pages-header-body {
+  padding: 1rem 0;
+}
+.pages-header-body button {
+  font-family: 'Acme';
+  font-weight: 400;
+  padding: calc(10 / 16 * 1rem);
+  background-color: rgba(129, 171, 6, 1);
+  border-radius: 200px;
+  width: calc(137 / 16 * 1rem);
+  font-size: calc(18 / 16 * 1rem);
+}
+@media (min-width: 1200px) {
+  .pages-header {
+    height: calc(95 / 16 * 1rem);
+  }
+  .pages-header-body button {
+    width: calc(157 / 16 * 1rem);
+  }
+  .pages-header-body {
+    padding: calc(24 / 16 * 1rem) 0;
+  }
+}
