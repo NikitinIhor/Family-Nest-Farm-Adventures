@@ -23,7 +23,9 @@
 .footer-link {
   font-size: 1rem;
   text-decoration: underline;
+  transition: color 0.4s ease;
 }
+
 .footer-reserved {
   font-size: 1rem;
   text-align: center;
@@ -45,5 +47,9 @@
   .footer-link,
   .footer-reserved {
     font-size: calc(18 / 16 * 1rem);
+  }
+  .footer-link:hover,
+  .footer-link:focus {
+    color: rgba(212, 66, 47, 1);
   }
 }
