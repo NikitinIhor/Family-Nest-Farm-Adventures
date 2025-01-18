@@ -1,0 +1,32 @@
+.terms {
+  padding-top: calc(48 / 16 * 1rem);
+  padding-bottom: calc(82 / 16 * 1rem);
+}
+.terms h1 {
+  font-size: calc(32 / 16 * 1rem);
+  text-align: center;
+  margin-bottom: calc(32 / 16 * 1rem);
+}
+.terms p {
+  font-size: 1rem;
+}
+.terms p:not(:last-child) {
+  margin-bottom: calc(32 / 16 * 1rem);
+}
+.terms p span {
+  display: block;
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .terms {
+    padding-top: calc(56 / 16 * 1rem);
+    padding-bottom: calc(60 / 16 * 1rem);
+  }
+  .terms h1 {
+    font-size: calc(56 / 16 * 1rem);
+    margin-bottom: calc(48 / 16 * 1rem);
+  }
+  .terms p {
+    font-size: calc(24 / 16 * 1rem);
+  }
+}
