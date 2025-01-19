@@ -21,21 +21,5 @@ export const advantages = () => {
     });
   });
 
-  slider.addEventListener('wheel', event => {
-    event.preventDefault();
-    slider.scrollBy({
-      left: event.deltaY,
-      behavior: 'smooth',
-    });
-  });
-
-  document.querySelector('.advantages-list').addEventListener(
-    'wheel',
-    e => {
-      e.stopPropagation();
-    },
-    { passive: true }
-  );
-
   updateActiveEgg();
 };
