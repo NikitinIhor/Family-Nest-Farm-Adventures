@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
 import glob from 'glob';
-import injectHTML from 'vite-plugin-html-inject';
+import { defineConfig } from 'vite';
 import FullReload from 'vite-plugin-full-reload';
+import injectHTML from 'vite-plugin-html-inject';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { globalStylesOptions } from './global.styles';
 
@@ -11,6 +11,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    base: '/family-nest-farm-adventures/',
     build: {
       sourcemap: true,
 
