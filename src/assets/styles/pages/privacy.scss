@@ -1,12 +1,21 @@
+.privacy {
+  padding-top: 48px;
+  padding-bottom: 73px;
+}
+
 .privacy-title {
   font-size: 32px;
-  margin-top: 48px;
   margin-bottom: 32px;
   text-align: center;
 }
 
 .privacy-text {
   font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.text-margin-none {
+  margin-bottom: 0;
 }
 
 .privacy-text-bold {
@@ -27,4 +36,29 @@
   height: 4px;
   border-radius: 50%;
   margin-right: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .privacy {
+    padding-top: 56px;
+    padding-bottom: 61px;
+  }
+
+  .privacy-title {
+    font-size: 56px;
+    margin-bottom: 48px;
+  }
+
+  .privacy-text {
+    font-size: 24px;
+  }
+
+  .privacy-list {
+    font-size: 24px;
+  }
+
+  .privacy-item::before {
+    width: 6px;
+    height: 6px;
+  }
 }
