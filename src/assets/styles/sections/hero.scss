@@ -1,0 +1,101 @@
+.hero {
+  position: relative;
+  padding-top: 96px;
+  padding-bottom: 44px;
+  background-image: url('../../assets/images/hero/main@2x.jpg');
+  background-size: cover;
+  // height: 100vh;
+}
+
+.main-title {
+  color: #213003;
+  text-align: center;
+  font-family: Acme;
+  font-size: 24px;
+  line-height: 1.5;
+  -webkit-text-stroke: 2px #e7ac38;
+}
+
+.container-play-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-now-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  margin-top: 275px;
+  background-color: #fbfaea;
+  border: 3px solid #d4422f;
+  border-radius: 20px;
+}
+
+.play-now {
+  color: #213003;
+  font-family: Acme;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.play-now-img {
+  width: 91px;
+  height: 20px;
+}
+
+.cow-img {
+  width: 167px;
+  height: 167px;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.man-img {
+  width: 140px;
+  height: 287px;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding-top: 195px;
+    padding-bottom: 140px;
+    background-position: 0;
+  }
+
+  .main-title {
+    font-size: 64px;
+    max-width: 752px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .play-now-link {
+    padding: 16px;
+  }
+
+  .play-now {
+    font-size: 24px;
+  }
+
+  .cow-img {
+    width: 500px;
+    height: 500px;
+  }
+
+  .man-img {
+    width: 252px;
+    height: 517px;
+  }
+}
