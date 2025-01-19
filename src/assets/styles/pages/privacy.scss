@@ -1,0 +1,30 @@
+.privacy-title {
+  font-size: 32px;
+  margin-top: 48px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.privacy-text {
+  font-size: 16px;
+}
+
+.privacy-text-bold {
+  font-weight: 700;
+}
+
+.privacy-list {
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.privacy-item::before {
+  content: '';
+  display: inline-block;
+  background-color: #213003;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
