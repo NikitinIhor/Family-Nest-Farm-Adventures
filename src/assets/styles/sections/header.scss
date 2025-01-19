@@ -78,6 +78,12 @@
     line-height: 1.5;
     padding: 10px 20px;
     border-radius: 200px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-item:hover {
+    background-color: #7e851e;
+    cursor: pointer;
   }
 
   .nav-burger {
