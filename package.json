@@ -1,11 +1,11 @@
 {
-  "name": "family_nest_farm_adventures",
+  "name": "family_nest_farm_adventures_backup",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/family_nest_farm_adventures/",
+    "build": "vite build --base=/family_nest_farm_adventures_backup/",
     "preview": "vite preview",
     "build:preview": "vite build && vite preview",
     "predeploy": "npm run build",
