@@ -4,22 +4,41 @@
   padding-bottom: 44px;
   background-image: url('../../assets/images/hero/main@2x.jpg');
   background-size: cover;
-  // height: 100vh;
+  background-position: -260px;
+  height: 100vh;
 }
 
+// .main-title {
+//   color: #213003;
+//   text-align: center;
+//   font-family: Acme;
+//   font-size: 24px;
+//   line-height: 1.5;
+//   -webkit-text-stroke: 2px #e7ac38;
+// }
+
 .main-title {
-  color: #213003;
-  text-align: center;
-  font-family: Acme;
-  font-size: 24px;
-  line-height: 1.5;
-  -webkit-text-stroke: 2px #e7ac38;
+  margin: 0 auto;
+  width: 288px;
+  height: auto;
+}
+
+.title-img {
+  width: 100%;
+  height: 100%;
 }
 
 .container-play-now {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  width: 234px;
+  height: auto;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .play-now-link {
@@ -28,10 +47,16 @@
   justify-content: center;
   gap: 8px;
   padding: 12px;
-  margin-top: 275px;
   background-color: #fbfaea;
   border: 3px solid #d4422f;
   border-radius: 20px;
+  transition: all 0.3s ease;
+  z-index: 2;
+  transition: background-color 0.4s ease;
+}
+
+.play-now-link:hover {
+  background-color: #f7eece;
 }
 
 .play-now {
@@ -53,7 +78,7 @@
   object-fit: cover;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -20px;
   z-index: 1;
 }
 
@@ -76,9 +101,26 @@
 
   .main-title {
     font-size: 64px;
-    max-width: 752px;
+    width: 752px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .title-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-play-now {
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 272px;
+    height: auto;
   }
 
   .play-now-link {
