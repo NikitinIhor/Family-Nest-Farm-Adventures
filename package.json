@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Family-Nest-Farm-Adventures/",
+    "build": "vite build --base=/",
     "preview": "vite preview",
     "build:preview": "vite build && vite preview",
     "predeploy": "npm run build",
-    "deploy": "netlify deploy -p"
+    "deploy": "npx netlify deploy -p"
   },
   "devDependencies": {
     "glob": "^8.1.0",
