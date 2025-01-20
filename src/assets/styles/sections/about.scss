@@ -1,16 +1,18 @@
 .about {
-  padding-top: 81px;
-  margin-bottom: calc(72 / 16 * 1rem);
+  padding-top: 72px;
+  padding-bottom: 72px;
+  // margin-top: calc(72 / 16 * 1rem);
+  // margin-bottom: calc(72 / 16 * 1rem);
 }
 
 .about-game-title {
   text-align: center;
-  margin-top: 20px;
 }
 
 .container-about-line {
   display: flex;
   flex-direction: column;
+  margin-top: 32px;
   row-gap: 16px;
 }
 
@@ -18,7 +20,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  margin-top: 32px;
 }
 
 .about-game-text {
@@ -32,6 +33,7 @@
 
 .about-game-img {
   border-radius: 30px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 1200px) {
