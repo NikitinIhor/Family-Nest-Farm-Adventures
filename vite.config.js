@@ -26,6 +26,7 @@ export default defineConfig(({ command }) => {
         },
       },
       outDir: '../dist',
+      assetsDir: 'assets',
     },
     plugins: [
       injectHTML(),
