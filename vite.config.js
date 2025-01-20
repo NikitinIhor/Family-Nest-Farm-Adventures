@@ -13,7 +13,7 @@ export default defineConfig(({ command }) => {
     root: 'src',
     build: {
       sourcemap: true,
-
+      base: '/family_nest_farm_adventures/',
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {
