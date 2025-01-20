@@ -28,6 +28,10 @@
   margin-bottom: 24px;
 }
 
+.privacy-item {
+  margin-left: 10px;
+}
+
 .privacy-item::before {
   content: '';
   display: inline-block;
@@ -36,6 +40,7 @@
   height: 4px;
   border-radius: 50%;
   margin-right: 8px;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 1200px) {
@@ -55,6 +60,10 @@
 
   .privacy-list {
     font-size: 24px;
+  }
+
+  .privacy-item {
+    margin-left: 16px;
   }
 
   .privacy-item::before {

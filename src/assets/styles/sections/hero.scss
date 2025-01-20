@@ -75,12 +75,17 @@
 .cow-img {
   width: 167px;
   height: 167px;
+  height: auto;
   object-fit: cover;
   position: absolute;
   bottom: 0;
-  left: -20px;
+  left: 0;
   z-index: 1;
 }
+
+// .cow-img-desk {
+//   display: none;
+// }
 
 .man-img {
   width: 140px;
@@ -134,7 +139,21 @@
   .cow-img {
     width: 500px;
     height: 500px;
+    object-fit: contain;
+    left: -60px;
   }
+
+  // .cow-img-desk {
+  //   position: absolute;
+  //   display: block;
+  //   bottom: 0;
+  //   left: -20px;
+  //   width: 500px;
+  //   height: 500px;
+  //   object-fit: contain;
+  //   left: -100px;
+  //   z-index: 1;
+  // }
 
   .man-img {
     width: 252px;
