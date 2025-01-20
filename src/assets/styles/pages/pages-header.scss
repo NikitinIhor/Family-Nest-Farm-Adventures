@@ -13,8 +13,12 @@
   padding: calc(10 / 16 * 1rem);
   background-color: rgba(129, 171, 6, 1);
   border-radius: 200px;
-  width: calc(137 / 16 * 1rem);
-  font-size: calc(18 / 16 * 1rem);
+  width: calc(145 / 16 * 1rem);
+  font-size: 1rem;
+  transition: background-color 0.4s ease;
+}
+.pages-header-body button:hover {
+  background-color: #7e851e;
 }
 
 @media (min-width: 1200px) {

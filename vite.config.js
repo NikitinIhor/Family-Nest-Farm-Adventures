@@ -1,9 +1,8 @@
-import { defineConfig } from 'vite';
 import glob from 'glob';
-import injectHTML from 'vite-plugin-html-inject';
+import { defineConfig } from 'vite';
 import FullReload from 'vite-plugin-full-reload';
+import injectHTML from 'vite-plugin-html-inject';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-import { globalStylesOptions } from './global.styles';
 
 export default defineConfig(({ command }) => {
   return {
@@ -11,6 +10,7 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    base: '/family-nest-farm-adventures/',
     build: {
       sourcemap: true,
 
@@ -26,6 +26,7 @@ export default defineConfig(({ command }) => {
         },
       },
       outDir: '../dist',
+      assetsDir: 'assets',
     },
     plugins: [
       injectHTML(),
@@ -47,10 +48,13 @@ export default defineConfig(({ command }) => {
       }),
     ],
     css: {
+      // preprocessorOptions: {
+      //   scss: {
+      //     additionalData: globalStylesOptions,
+      //   },
+      // },
       preprocessorOptions: {
-        scss: {
-          additionalData: globalStylesOptions,
-        },
+        scss: {},
       },
     },
   };

@@ -1,14 +1,16 @@
-@import url(../assets/styles/sections/header.scss);
-@import url(../assets/styles/sections/hero.scss);
-@import url(../assets/styles/sections/about.scss);
-@import url(../assets/styles/sections/advantages.scss);
-@import url(../assets/styles/sections/gallery.scss);
-@import url(../assets/styles/sections/start.scss);
-@import url(../assets/styles/sections/footer.scss);
+@use './common/reset';
 
-@import url(../assets/styles/pages/pages-header.scss);
-@import url(../assets/styles/pages/privacy.scss);
-@import url(../assets/styles/pages/terms.scss);
+@use '../assets/styles/sections/header';
+@use '../assets/styles/sections/hero';
+@use '../assets/styles/sections/about';
+@use '../assets/styles/sections/advantages';
+@use '../assets/styles/sections/gallery';
+@use '../assets/styles/sections/start';
+@use '../assets/styles/sections/footer';
+
+@use '../assets/styles/pages/pages-header';
+@use '../assets/styles/pages/privacy';
+@use '../assets/styles/pages/terms';
 
 @font-face {
   font-family: 'Acme';

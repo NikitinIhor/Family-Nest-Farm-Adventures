@@ -1,8 +1,7 @@
-export const burger = () => {
-  const menuMobile = document.querySelector('.mobile-nav');
-  const menuOpen = document.querySelector('.nav-btn');
-  const menuClose = document.querySelector('.close-btn');
-  const header = document.querySelector('.header');
+const menuMobile = document.querySelector('.mobile-nav');
+const menuOpen = document.querySelector('.nav-btn');
+const menuClose = document.querySelector('.close-btn');
+const hederBlur = document.querySelector('.header');
 
   const toggleMenu = isOpen => {
     menuOpen.style.display = isOpen ? 'none' : 'block';
