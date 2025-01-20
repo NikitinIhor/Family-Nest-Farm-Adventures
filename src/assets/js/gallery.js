@@ -24,13 +24,6 @@ export const gallery = () => {
         left: index * items[0].offsetWidth,
         behavior: 'smooth',
       });
-
-      images.forEach((img, i) => {
-        img.classList.remove('img-scale');
-        if (i === index) {
-          img.classList.add('img-scale');
-        }
-      });
     });
   });
 
@@ -38,48 +31,24 @@ export const gallery = () => {
   const rightButton = document.querySelector('.right-button');
 
   leftButton.addEventListener('click', () => {
-    currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
-    slider.scrollTo({
-      left: currentIndex * items[0].offsetWidth,
-      behavior: 'smooth',
-    });
-
-    images.forEach((img, i) => {
-      img.classList.remove('img-scale');
-      if (i === currentIndex) {
-        img.classList.add('img-scale');
-      }
-    });
+    if (currentIndex > 0) {
+      currentIndex -= 1;
+      slider.scrollTo({
+        left: currentIndex * items[0].offsetWidth,
+        behavior: 'smooth',
+      });
+    }
   });
+
   rightButton.addEventListener('click', () => {
-    currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
-    slider.scrollTo({
-      left: currentIndex * items[0].offsetWidth,
-      behavior: 'smooth',
-    });
-    images.forEach((img, i) => {
-      img.classList.remove('img-scale');
-      if (i === currentIndex) {
-        img.classList.add('img-scale');
-      }
-    });
+    if (currentIndex < images.length - 1) {
+      currentIndex += 1;
+      slider.scrollTo({
+        left: currentIndex * items[0].offsetWidth,
+        behavior: 'smooth',
+      });
+    }
   });
-
-  slider.addEventListener('wheel', event => {
-    event.preventDefault();
-    slider.scrollBy({
-      left: event.deltaY,
-      behavior: 'smooth',
-    });
-  });
-
-  document.querySelector('.gallery-list').addEventListener(
-    'wheel',
-    e => {
-      e.stopPropagation();
-    },
-    { passive: true }
-  );
 
   updateActiveEgg();
 };
