@@ -82,6 +82,10 @@
   z-index: 1;
 }
 
+.cow-img-desk {
+  display: none;
+}
+
 .man-img {
   width: 140px;
   height: 287px;
@@ -137,6 +141,7 @@
 
   .cow-img-desk {
     position: absolute;
+    display: block;
     bottom: 0;
     left: -20px;
     width: 500px;

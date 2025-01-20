@@ -1,18 +1,20 @@
-const menuMobile = document.querySelector('.mobile-nav');
-const menuOpen = document.querySelector('.nav-btn');
-const menuClose = document.querySelector('.close-btn');
-const hederBlur = document.querySelector('.header');
+export const burger = () => {
+  const menuMobile = document.querySelector('.mobile-nav');
+  const menuOpen = document.querySelector('.nav-btn');
+  const menuClose = document.querySelector('.close-btn');
+  const header = document.querySelector('.header');
 
-menuOpen.addEventListener('click', () => {
-  menuOpen.style.display = 'none';
-  menuClose.style.display = 'block';
-  menuMobile.style.display = 'block';
-  hederBlur.style.backdropFilter = 'blur(40px)';
-});
+  const toggleMenu = isOpen => {
+    menuOpen.style.display = isOpen ? 'none' : 'block';
+    menuClose.style.display = isOpen ? 'block' : 'none';
+    menuMobile.style.display = isOpen ? 'block' : 'none';
+    header.style.backdropFilter = isOpen ? 'blur(40px)' : 'none';
+  };
 
-menuClose.addEventListener('click', () => {
-  menuOpen.style.display = 'block';
-  menuClose.style.display = 'none';
-  menuMobile.style.display = 'none';
-  hederBlur.style.backdropFilter = 'none';
-});
+  menuOpen.addEventListener('click', () => toggleMenu(true));
+  menuClose.addEventListener('click', () => toggleMenu(false));
+
+  window.addEventListener('scroll', () => {
+    header.style.backdropFilter = window.scrollY > 0 ? 'blur(40px)' : 'none';
+  });
+};

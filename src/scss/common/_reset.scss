@@ -9,7 +9,13 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-padding-top: 95px;
+  scroll-padding-top: 222px;
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    scroll-padding-top: 222px;
+  }
 }
 
 html,
