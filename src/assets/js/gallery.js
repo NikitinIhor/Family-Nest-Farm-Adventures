@@ -16,7 +16,8 @@ export const gallery = () => {
     eggs.forEach((egg, i) => egg.classList.toggle('active', i === index));
     currentIndex = index;
   }
-  slider.addEventListener('scroll', updateActiveEgg);
+
+  slider.addEventListener('scrollend', updateActiveEgg);
 
   if (isMobile) {
     eggs.forEach((egg, index) => {
@@ -30,14 +31,18 @@ export const gallery = () => {
     });
   }
 
+  function scrollToIndex(index) {
+    slider.scrollTo({
+      left: index * items[0].offsetWidth,
+      behavior: 'smooth',
+    });
+  }
+
   if (leftButton) {
     leftButton.addEventListener('click', () => {
       if (currentIndex > 0) {
         currentIndex -= 1;
-        slider.scrollTo({
-          left: currentIndex * items[0].offsetWidth,
-          behavior: 'smooth',
-        });
+        scrollToIndex(currentIndex);
       }
     });
   }
@@ -46,10 +51,7 @@ export const gallery = () => {
     rightButton.addEventListener('click', () => {
       if (currentIndex < items.length - 1) {
         currentIndex += 1;
-        slider.scrollTo({
-          left: currentIndex * items[0].offsetWidth,
-          behavior: 'smooth',
-        });
+        scrollToIndex(currentIndex);
       }
     });
   }
