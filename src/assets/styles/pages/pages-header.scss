@@ -1,6 +1,11 @@
 .pages-header {
   height: calc(76 / 16 * 1rem);
   background-color: rgba(252, 248, 234, 0.4);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .pages-header-body {
