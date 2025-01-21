@@ -5,8 +5,13 @@
   background-image: url('/images/hero/main@2x.jpg');
   background-size: cover;
   background-position: -260px;
+
   height: 100vh;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature
 .main-title {
   margin: 0 auto;
   width: 288px;
@@ -42,7 +47,7 @@
   border-radius: 20px;
   transition: all 0.3s ease;
   z-index: 2;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.3s ease;
 }
 
 .play-now-link:hover {
@@ -63,27 +68,22 @@
 }
 
 .cow-img {
-  width: 167px;
-  height: 167px;
-  height: auto;
-  object-fit: cover;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -24px;
+  width: 167px;
+  height: auto;
+  object-fit: cover;
   z-index: 1;
 }
 
-// .cow-img-desk {
-//   display: none;
-// }
-
 .man-img {
-  width: 140px;
-  height: 287px;
-  object-fit: cover;
   position: absolute;
   bottom: 0;
   right: 0;
+  width: 140px;
+  height: 287px;
+  object-fit: cover;
   z-index: 1;
 }
 
@@ -131,22 +131,30 @@
     height: 500px;
     object-fit: contain;
     left: -60px;
+    animation: cow-slide-in 2s forwards;
   }
-
-  // .cow-img-desk {
-  //   position: absolute;
-  //   display: block;
-  //   bottom: 0;
-  //   left: -20px;
-  //   width: 500px;
-  //   height: 500px;
-  //   object-fit: contain;
-  //   left: -100px;
-  //   z-index: 1;
-  // }
 
   .man-img {
     width: 252px;
     height: 517px;
+    animation: man-slide-in 2s forwards;
+  }
+
+  @keyframes cow-slide-in {
+    from {
+      left: -600px;
+    }
+    to {
+      left: -60px;
+    }
+  }
+
+  @keyframes man-slide-in {
+    from {
+      right: -600px;
+    }
+    to {
+      right: 0;
+    }
   }
 }
