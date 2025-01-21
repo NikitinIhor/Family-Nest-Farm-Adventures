@@ -16,6 +16,7 @@ export const gallery = () => {
     eggs.forEach((egg, i) => egg.classList.toggle('active', i === index));
     currentIndex = index;
   }
+  slider.addEventListener('scroll', updateActiveEgg);
 
   if (isMobile) {
     eggs.forEach((egg, index) => {
@@ -52,8 +53,6 @@ export const gallery = () => {
       }
     });
   }
-
-  slider.addEventListener('scroll', updateActiveEgg);
 
   updateActiveEgg();
 };

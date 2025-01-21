@@ -10,7 +10,7 @@
 }
 .gallery-title {
   font-size: calc(32 / 16 * 1rem);
-  margin-bottom: 1rem;
+  margin-bottom: calc(8 / 16 * 1rem);
   text-align: center;
 }
 .gallery-eggs {
@@ -33,10 +33,12 @@
   height: calc(186 / 16 * 1rem);
   width: 100%;
 }
-.gallery-chicken-body {
+.gallery-chicken-body img {
   display: flex;
   justify-self: flex-end;
   margin-right: calc(15 / 16 * 1rem);
+  width: calc(30 / 16 * 1rem);
+  height: calc(35 / 16 * 1rem);
 }
 .gallery-list {
   display: flex;
