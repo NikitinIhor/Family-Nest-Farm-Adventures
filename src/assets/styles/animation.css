@@ -1,0 +1,143 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.animated-element {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeIn 2s ease-out forwards;
+}
+/* -------------------------------------------------- */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.advantages-image1.animated-image,
+.advantages-image2.animated-image {
+  opacity: 0;
+  transform: translateX(-100px);
+  visibility: hidden;
+  position: absolute;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.advantages-image1 {
+  top: -105px;
+  left: -25px;
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+}
+.advantages-image2 {
+  bottom: -100px;
+  right: -50px;
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+}
+.advantages-image1.animated-image.show {
+  animation: slideInLeft 1s ease-out forwards;
+  visibility: visible;
+}
+
+.advantages-image2.animated-image.show {
+  animation: slideInRight 1s ease-out forwards;
+  visibility: visible;
+}
+/* -------------------------------------------------------- */
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.start-image.animated-image {
+  opacity: 0;
+  transform: translateX(100px);
+  visibility: hidden;
+  position: absolute;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.start-image.animated-image.show {
+  animation: slideInFromRight 1s ease-out forwards;
+  visibility: visible;
+}
+/* --------------------------------------------------- */
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.footer h3.animated-footer,
+.footer .footer-nav.animated-footer,
+.footer .footer-reserved.animated-footer {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(0);
+}
+
+.footer h3.animated-footer.show {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.footer .footer-nav.animated-footer.show,
+.footer .footer-reserved.animated-footer.show {
+  animation: slideInFromRight 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.footer h3.animated-footer.show,
+.footer .footer-nav.animated-footer.show,
+.footer .footer-reserved.animated-footer.show {
+  visibility: visible;
+}
+/* ----------------------------------------------------- */

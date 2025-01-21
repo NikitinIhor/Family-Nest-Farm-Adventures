@@ -2,8 +2,7 @@
   margin-bottom: calc(72 / 16 * 1rem);
 }
 .advantages-container {
-  //   max-width: 320px;
-  padding: 0 0 0 16px;
+  padding: 0;
   margin: 0 auto;
 }
 .advantages {
@@ -45,6 +44,10 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .advantages-item {
   padding: calc(24 / 16 * 1rem);
@@ -135,6 +138,8 @@
     align-items: center;
     overflow-x: visible;
     scroll-snap-type: none;
+    padding-left: 0;
+    padding-right: 0;
   }
   .advantages-item {
     width: calc(360 / 16 * 1rem);

@@ -1,4 +1,5 @@
 import { advantages } from './assets/js/advantages.js';
+import { animationOfFooter, animationOfImage } from './assets/js/animations.js';
 import { gallery } from './assets/js/gallery.js';
 import { burger } from './assets/js/menu.js';
 
@@ -8,4 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   burger();
   gallery();
+  animationOfImage();
+  animationOfFooter();
 });
