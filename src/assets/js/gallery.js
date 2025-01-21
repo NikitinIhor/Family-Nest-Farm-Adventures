@@ -40,6 +40,7 @@ export const gallery = () => {
           behavior: 'smooth',
         });
       }
+      console.log('left');
     });
   }
 
@@ -52,6 +53,7 @@ export const gallery = () => {
           behavior: 'smooth',
         });
       }
+      console.log('right');
     });
   }
 
