@@ -7,3 +7,14 @@
     </div>
   </div>
 </header>
+
+<script>
+  const headerBlur = document.querySelector('.pages-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      headerBlur.style.backdropFilter = 'blur(40px)';
+    } else {
+      headerBlur.style.backdropFilter = 'none';
+    }
+  });
+</script>
