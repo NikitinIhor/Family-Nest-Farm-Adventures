@@ -24,6 +24,7 @@ export const burger = () => {
 
   menuOpen.addEventListener('click', () => toggleMenu(true));
   menuClose.addEventListener('click', () => toggleMenu(false));
+  menuMobile.addEventListener('click', () => toggleMenu(false));
 
   window.addEventListener('scroll', () => {
     if (window.innerWidth >= 1200) {
