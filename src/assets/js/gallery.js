@@ -17,8 +17,6 @@ export const gallery = () => {
     currentIndex = index;
   }
 
-  slider.addEventListener('scroll', updateActiveEgg);
-
   if (isMobile) {
     eggs.forEach((egg, index) => {
       egg.addEventListener('click', () => {
@@ -40,7 +38,6 @@ export const gallery = () => {
           behavior: 'smooth',
         });
       }
-      console.log('left');
     });
   }
 
@@ -53,9 +50,10 @@ export const gallery = () => {
           behavior: 'smooth',
         });
       }
-      console.log('right');
     });
   }
+
+  slider.addEventListener('scroll', updateActiveEgg);
 
   updateActiveEgg();
 };
