@@ -8,24 +8,28 @@ export const gallery = () => {
   if (!slider || !items.length || !eggs.length) return;
 
   let currentIndex = 0;
+  const isMobile = window.innerWidth < 768;
 
   function updateActiveEgg() {
     let index = Math.round(slider.scrollLeft / items[0].offsetWidth);
+    index = Math.max(0, Math.min(index, items.length - 1));
     eggs.forEach((egg, i) => egg.classList.toggle('active', i === index));
     currentIndex = index;
   }
 
   slider.addEventListener('scroll', updateActiveEgg);
 
-  eggs.forEach((egg, index) => {
-    egg.addEventListener('click', () => {
-      currentIndex = index;
-      slider.scrollTo({
-        left: index * items[0].offsetWidth,
-        behavior: 'smooth',
+  if (isMobile) {
+    eggs.forEach((egg, index) => {
+      egg.addEventListener('click', () => {
+        currentIndex = index;
+        slider.scrollTo({
+          left: index * items[0].offsetWidth,
+          behavior: 'smooth',
+        });
       });
     });
-  });
+  }
 
   if (leftButton) {
     leftButton.addEventListener('click', () => {
