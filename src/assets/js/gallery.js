@@ -9,12 +9,10 @@ export const gallery = () => {
   function updateActiveState() {
     let index = Math.round(slider.scrollLeft / items[0].offsetWidth);
 
-    // Оновлюємо класи для "яєць"
     eggs.forEach((egg, i) => {
       egg.classList.toggle('active', i === index);
     });
 
-    // Оновлюємо класи для зображень
     items.forEach((item, i) => {
       item
         .querySelector('figure')

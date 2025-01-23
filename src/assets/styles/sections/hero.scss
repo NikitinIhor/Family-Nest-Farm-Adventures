@@ -128,30 +128,34 @@
     height: 500px;
     object-fit: contain;
     left: -60px;
-    animation: cow-slide-in 2s forwards;
+    animation: cow-slide-in 2s forwards ease-out;
   }
 
   .man-img {
     width: 252px;
     height: 517px;
-    animation: man-slide-in 2s forwards;
+    animation: man-slide-in 2s forwards ease-out;
   }
 
   @keyframes cow-slide-in {
     from {
-      left: -600px;
+      left: -300px;
+      opacity: 0;
     }
     to {
       left: -60px;
+      opacity: 1;
     }
   }
 
   @keyframes man-slide-in {
     from {
-      right: -600px;
+      right: -300px;
+      opacity: 0;
     }
     to {
       right: 0;
+      opacity: 1;
     }
   }
 }
