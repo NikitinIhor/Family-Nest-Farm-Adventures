@@ -1,3 +1,4 @@
+import 'modern-normalize/modern-normalize.css';
 import { advantages } from './assets/js/advantages.js';
 import { animationOfFooter, animationOfImage } from './assets/js/animations.js';
 import { gallery } from './assets/js/gallery.js';
