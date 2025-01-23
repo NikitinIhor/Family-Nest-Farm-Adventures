@@ -1,5 +1,5 @@
 .gallery-container {
-  max-width: 320px;
+  max-width: 1200px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -93,10 +93,8 @@
     display: none;
   }
   .gallery-container {
-    max-width: 1200px;
     padding: 0;
   }
-
   .gallery-title {
     font-size: calc(56 / 16 * 1rem);
     margin-bottom: calc(48 / 16 * 1rem);
@@ -126,6 +124,7 @@
 
   .gallery-list {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: calc(36 / 16 * 1rem);
     overflow-x: hidden;
