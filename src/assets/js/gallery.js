@@ -9,6 +9,7 @@ export const gallery = () => {
 
   let currentIndex = 0;
   const isMobile = window.innerWidth < 768;
+  const isDesktop = window.innerWidth >= 1200;
 
   function updateActiveEgg() {
     let index = Math.round(slider.scrollLeft / items[0].offsetWidth);
@@ -17,39 +18,39 @@ export const gallery = () => {
     currentIndex = index;
   }
 
+  function scrollToIndex(index) {
+    currentIndex = index;
+    slider.scrollTo({
+      left: index * items[0].offsetWidth,
+      behavior: 'smooth',
+    });
+  }
+
+  if (isDesktop) {
+    currentIndex = 1;
+    scrollToIndex(currentIndex);
+  } else if (isMobile) {
+    currentIndex = Math.min(1, items.length - 1);
+    scrollToIndex(currentIndex);
+  }
+
   if (isMobile) {
     eggs.forEach((egg, index) => {
       egg.addEventListener('click', () => {
-        currentIndex = index;
-        slider.scrollTo({
-          left: index * items[0].offsetWidth,
-          behavior: 'smooth',
-        });
+        scrollToIndex(index);
       });
     });
   }
 
   if (leftButton) {
     leftButton.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex -= 1;
-        slider.scrollTo({
-          left: currentIndex * items[0].offsetWidth,
-          behavior: 'smooth',
-        });
-      }
+      if (currentIndex > 0) scrollToIndex(currentIndex - 1);
     });
   }
 
   if (rightButton) {
     rightButton.addEventListener('click', () => {
-      if (currentIndex < items.length - 1) {
-        currentIndex += 1;
-        slider.scrollTo({
-          left: currentIndex * items[0].offsetWidth,
-          behavior: 'smooth',
-        });
-      }
+      if (currentIndex < items.length - 1) scrollToIndex(currentIndex + 1);
     });
   }
 
