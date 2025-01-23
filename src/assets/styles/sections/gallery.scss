@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 100;
+  z-index: 1;
   margin-bottom: calc(72 / 16 * 1rem);
 }
 
@@ -79,6 +79,12 @@
   .gallery-image1 img {
     width: calc(456 / 16 * 1rem);
     height: calc(294 / 16 * 1rem);
+  }
+  .gallery-item-active img {
+    width: 552px;
+    height: 357px;
+    transition: transform 0.3s ease;
+    z-index: 1;
   }
 }
 
