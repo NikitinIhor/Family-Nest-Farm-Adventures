@@ -77,9 +77,13 @@
   .gallery-item {
     width: calc(456 / 16 * 1rem);
   }
-  .gallery-item img {
+  .gallery-image1 img {
     width: calc(456 / 16 * 1rem);
     height: calc(294 / 16 * 1rem);
+  }
+  .gallery-item-active img {
+    width: calc(552 / 16 * 1rem);
+    height: calc(357 / 16 * 1rem);
   }
 }
 
