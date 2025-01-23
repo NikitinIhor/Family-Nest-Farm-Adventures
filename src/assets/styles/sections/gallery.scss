@@ -1,5 +1,5 @@
 .gallery-container {
-  max-width: 1200px;
+  max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -91,6 +91,10 @@
 @media (min-width: 1200px) {
   .gallery-chicken-body {
     display: none;
+  }
+  .gallery-container {
+    max-width: 1200px;
+    padding: 0;
   }
 
   .gallery-title {
