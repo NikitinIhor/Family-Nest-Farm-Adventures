@@ -2,59 +2,67 @@ export const gallery = () => {
   const slider = document.querySelector('.gallery-list');
   const eggs = document.querySelectorAll('.gallery-egg');
   const items = document.querySelectorAll('.gallery-item');
+  const images = document.querySelectorAll('.gallery-item img');
+
+  let currentIndex = 0;
+
+  function updateActiveState() {
+    let index = Math.round(slider.scrollLeft / items[0].offsetWidth);
+
+    eggs.forEach((egg, i) => {
+      egg.classList.toggle('active', i === index);
+    });
+
+    items.forEach((item, i) => {
+      item
+        .querySelector('figure')
+        .classList.toggle('gallery-item-active', i === index + 1);
+    });
+
+    currentIndex = index;
+  }
+
+  slider.addEventListener('scroll', updateActiveState);
+
+  eggs.forEach((egg, index) => {
+    egg.addEventListener('click', () => {
+      currentIndex = index;
+
+      slider.scrollTo({
+        left: index * items[0].offsetWidth,
+        behavior: 'smooth',
+      });
+
+      updateActiveState();
+    });
+  });
+
   const leftButton = document.querySelector('.left-button');
   const rightButton = document.querySelector('.right-button');
 
-  if (!slider || !items.length || !eggs.length) return;
-
-  let currentIndex = 0;
-  const isMobile = window.innerWidth < 768;
-  const isDesktop = window.innerWidth >= 1200;
-
-  function updateActiveEgg() {
-    let index = Math.round(slider.scrollLeft / items[0].offsetWidth);
-    index = Math.max(0, Math.min(index, items.length - 1));
-    eggs.forEach((egg, i) => egg.classList.toggle('active', i === index));
-    currentIndex = index;
-  }
-
-  function scrollToIndex(index) {
-    currentIndex = index;
-    slider.scrollTo({
-      left: index * items[0].offsetWidth,
-      behavior: 'smooth',
-    });
-  }
-
-  if (isDesktop) {
-    currentIndex = 1;
-    scrollToIndex(currentIndex);
-  } else if (isMobile) {
-    currentIndex = Math.min(1, items.length - 1);
-    scrollToIndex(currentIndex);
-  }
-
-  if (isMobile) {
-    eggs.forEach((egg, index) => {
-      egg.addEventListener('click', () => {
-        scrollToIndex(index);
+  leftButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex -= 1;
+      slider.scrollTo({
+        left: currentIndex * items[0].offsetWidth,
+        behavior: 'smooth',
       });
-    });
-  }
 
-  if (leftButton) {
-    leftButton.addEventListener('click', () => {
-      if (currentIndex > 0) scrollToIndex(currentIndex - 1);
-    });
-  }
+      updateActiveState();
+    }
+  });
 
-  if (rightButton) {
-    rightButton.addEventListener('click', () => {
-      if (currentIndex < items.length - 1) scrollToIndex(currentIndex + 1);
-    });
-  }
+  rightButton.addEventListener('click', () => {
+    if (currentIndex < items.length - 1) {
+      currentIndex += 1;
+      slider.scrollTo({
+        left: currentIndex * items[0].offsetWidth,
+        behavior: 'smooth',
+      });
 
-  slider.addEventListener('scroll', updateActiveEgg);
+      updateActiveState();
+    }
+  });
 
-  updateActiveEgg();
+  updateActiveState();
 };
