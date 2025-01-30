@@ -170,8 +170,12 @@
         </ul>
       </nav>
       <p class="footer-reserved">
-        ©2024 StarBurstPlayWin.com All Rights Reserved
+        ©<span id="footer-year"></span> StarBurstPlayWin.com All Rights Reserved
       </p>
+      <script>
+        document.getElementById('footer-year').textContent =
+          new Date().getFullYear();
+      </script>
     </div>
   </div>
 </footer>
